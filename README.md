@@ -32,10 +32,15 @@ Users should be able to:
 
 ## My process
 
+- Developed an HTML structure and styling with CSS to create a personalized webpage for a music producer friend.
+- Tailored the appearance of the header, producer-info section, and footer to meet the client's preferences. Applied comprehensive styles to achieve the desired layout, colors, and fonts throughout the webpage.
+- Addressed the client's preference for the "Rubik Glitch Pop" font, enhancing the overall aesthetic of the webpage. Implemented text-shadow to create a distinctive glowing effect on the header text as per the client's specific request.
+- Integrated Font Awesome icons for social media platforms (Facebook, Twitter, Instagram, SoundCloud) with custom styling.
+- Successfully converted the personalized music producer webpage, featuring tailored layouts, fonts, and styles including custom glowing effects and Font Awesome icons, into a dynamic and responsive React application.-
+
 ### Built with
 
 - Semantic HTML5 markup
-- [Bootstrap](https://getbootstrap.com/) - CSS library
 - CSS custom properties
 - [Sass](https://sass-lang.com/) - Preprocessor scripting language
 - Flexbox
@@ -50,7 +55,7 @@ Nothing really learned here, mostly just to practice my skills.
 
 ### Continued development
 
-This was my first project that I did on my own. Updated it as I learning more lessons and techniques.
+Will continue to improve it to from gained knowledge and client's request.
 
 ## Author
 
