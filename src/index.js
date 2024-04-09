@@ -2,29 +2,29 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles.css";
 
-const socialLinks = [
+const contactLinks = [
   {
-    url: "soon to come",
-    className: "facebook",
+    url: "#",
     icon: "fa-facebook",
+    styles: { "--fa-animation-duration": "2s" },
     animationClass: "fa-beat",
   },
   {
     url: "https://www.youtube.com/channel/UCXwneEFGcoYM6NQhtaZkk2Q",
-    className: "youtube",
     icon: "fa-youtube",
+    styles: { "--fa-animation-duration": "2s", "--fa-fade-opacity": "0.6" },
     animationClass: "fa-fade",
   },
   {
     url: "https://www.instagram.com/theblaqksheep/",
-    className: "instagram",
     icon: "fa-instagram",
+    styles: { "--fa-beat-fade-opacity": "0.1", "--fa-beat-fade-scale": "1.25" },
     animationClass: "fa-beat-fade",
   },
   {
-    url: "soon to come",
-    className: "",
+    url: "#",
     icon: "fa-soundcloud",
+    styles: {},
     animationClass: "fa-bounce",
   },
 ];
@@ -61,49 +61,28 @@ const ProducerInfo = () => {
     <section className="producer-info">
       <div className="producer-bio" id="contactHolder"></div>
       <div id="contactHold">
-        <div className="contact">
-          <div>
-            <a
-              style={{ color: "white", "--fa-animation-duration": "2s" }}
-              href="#"
-            >
-              <i className="fab fa-facebook fa-4x fa-beat"></i>
-            </a>
-          </div>
-          <div>
-            <a
-              style={{
-                color: "white",
-                "--fa-animation-duration": "2s",
-                "--fa-fade-opacity": "0.6",
-              }}
-              href="https://www.youtube.com/channel/UCXwneEFGcoYM6NQhtaZkk2Q"
-              target="_blank"
-            >
-              <i className="fab fa-youtube fa-4x fa-fade"></i>
-            </a>
-          </div>
-          <div>
-            <a
-              style={{
-                color: "white",
-                "--fa-beat-fade-opacity": "0.1",
-                "--fa-beat-fade-scale": "1.25",
-              }}
-              href="https://www.instagram.com/theblaqksheep/"
-              target="_blank"
-            >
-              <i className="fab fa-instagram fa-4x fa-beat-fade"></i>
-            </a>
-          </div>
-          <div>
-            <a style={{ color: "white" }} href="#">
-              <i className="fab fa-soundcloud fa-4x fa-bounce"></i>
-            </a>
-          </div>
-        </div>
+        <ContactLinks links={contactLinks} />
       </div>
     </section>
+  );
+};
+
+const ContactLinks = ({ links }) => {
+  return (
+    <div className="contact">
+      {links.map((link, index) => (
+        <div key={index}>
+          <a
+            style={{ color: "white", ...link.styles }}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className={`fab ${link.icon} fa-4x ${link.animationClass}`}></i>
+          </a>
+        </div>
+      ))}
+    </div>
   );
 };
 
